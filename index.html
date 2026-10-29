@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Secure checkout for your Dinho Cloud Kitchen order.">
+  <title>Checkout | Dinho Cloud Kitchen</title>
+</head>
+<body>
+
+  <header>
+    <p><a href="../index.html">Dinho Cloud Kitchen</a></p>
+  </header>
+
+  <main>
+    <article>
+      <h1>Checkout</h1>
+      <p>Enter your delivery and payment details to complete your order. Fields marked with an asterisk (*) are required.</p>
+
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Contact details</legend>
+
+          <p>
+            <label for="name">Full name *</label><br>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+              minlength="2"
+              maxlength="80">
+          </p>
+
+          <p>
+            <label for="email">Email address *</label><br>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery address</legend>
+
+          <p>
+            <label for="address">Street address *</label><br>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              autocomplete="street-address"
+              required
+              minlength="5"
+              maxlength="120">
+          </p>
+
+          <p>
+            <label for="city">City *</label><br>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              autocomplete="address-level2"
+              required
+              minlength="2"
+              maxlength="60">
+          </p>
+
+          <p>
+            <label for="country">Country *</label><br>
+            <select id="country" name="country" autocomplete="country" required>
+              <option value="">Select a country</option>
+              <option value="NG">Nigeria</option>
+              <option value="GH">Ghana</option>
+              <option value="GB">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment details</legend>
+
+          <p>
+            <label for="card-number">Card number *</label><br>
+            <input
+              type="text"
+              id="card-number"
+              name="card-number"
+              autocomplete="cc-number"
+              inputmode="numeric"
+              required
+              pattern="[0-9]{4}[\s\-]?[0-9]{4}[\s\-]?[0-9]{4}[\s\-]?[0-9]{1,7}"
+              title="Enter a card number of 13 to 19 digits. Spaces or hyphens between groups of four are allowed."
+              placeholder="1234 5678 9012 3456">
+          </p>
+
+          <p>
+            <label for="expiry-month">Expiry month *</label>
+            <select id="expiry-month" name="expiry-month" autocomplete="cc-exp-month" required>
+              <option value="">MM</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+
+            <label for="expiry-year">Expiry year *</label>
+            <select id="expiry-year" name="expiry-year" autocomplete="cc-exp-year" required>
+              <option value="">YYYY</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">2032</option>
+              <option value="2033">2033</option>
+              <option value="2034">2034</option>
+              <option value="2035">2035</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="cvc">Security code (CVC) *</label><br>
+            <input
+              type="text"
+              id="cvc"
+              name="cvc"
+              autocomplete="cc-csc"
+              inputmode="numeric"
+              required
+              pattern="[0-9]{3,4}"
+              title="Enter the 3 or 4 digit code on your card."
+              size="5"
+              maxlength="4">
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="terms" name="terms" value="accepted" required>
+          <label for="terms">I agree to the <a href="#">terms and conditions</a> and the <a href="#">privacy policy</a>. *</label>
+        </p>
+
+        <p>
+          <button type="submit">Place order</button>
+          <button type="reset">Clear form</button>
+        </p>
+
+      </form>
+    </article>
+  </main>
+
+  <footer>
+    <p><small>&copy; 2026 Dinho Cloud Kitchen. All rights reserved.</small></p>
+  </footer>
+
+</body>
+</html>
